@@ -42,9 +42,10 @@ def clean_data(df):
     categories.columns = category_colnames
     for column in categories:
         categories[column] = categories[column].apply(lambda x: x.split("-")[1])
-
-    # concat the category dataframe to the main dataframe. Drop duplicates.
         categories[column] = pd.to_numeric(categories[column], errors='coerce')
+
+    categories['related'] = categories['related'].replace(to_replace=2, value=1)     # replace 2s by 1s
+    # concat the category dataframe to the main dataframe. Drop duplicates.
     df.drop('categories', axis=1, inplace=True)
     df = pd.concat([df, categories], axis=1)
     df.drop_duplicates(inplace=True)
