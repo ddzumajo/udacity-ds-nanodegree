@@ -14,20 +14,26 @@ The project is structure as shown below:
 - data folder
   * disaster_categories.csv  # data to process 
   * disaster_messages.csv  # data to process
-  * process_data.py
+  * process_data.py     # python script to process data and obtein a database. 
   * InsertDatabaseName.db   # database to save clean data to
 
 - models folder
-  * train_classifier.py
+  * train_classifier.py  # python script to build a classification model and print the metrics. 
   * classifier.pkl  # saved model 
 
 - README.md
 
 Requirements
 -----
-This project runs under Python 3.9. Some packaged must be included.
+This project runs under Python 3.9. Some packages must to be instaled. 
 
 If you are using PyCharm just do the following: 
 1. Create and environment in settings>project
-2. Go to venv/Scripts and activate the environment by
-executing.\activate
+2. Go to venv/Scripts and activate the environment by executing .\activate
+
+In other cases, just run the scripts following the requirement expresses in the __main__
+functions. That is to run the script followed by the necessary arguments as shown below:
+
+python process_data.py messages_filepath, categories_filepath, database_filepath
+python train_classifier.py database_filepath, model_filepath
+

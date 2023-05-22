@@ -1,4 +1,5 @@
 # import libraries
+import os
 import sys
 import pandas as pd
 from sqlalchemy import create_engine
@@ -65,6 +66,8 @@ def save_data(df, database_filename):
     database
 
     """
+    if os.path.exists(database_filename):
+        os.remove(database_filename)
     engine = create_engine('sqlite:///' + database_filename)
     return df.to_sql('ft_messages', engine, index=False)
 
