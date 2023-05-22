@@ -1,8 +1,10 @@
 # README
 
+
 In this project I apply a classification algorithm to classify disaster messages.
 Previously a cleaning step is performed, including extract the multiple targets, as well the creation of a database that will be the input of the classifier. 
 The project has also a web app where an user can introduce messages and get the classification. 
+
 Files
 -----
 The project is structure as shown below:
