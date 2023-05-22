@@ -1,7 +1,8 @@
 # README
 
-This project 
-
+In this project I apply a classification algorithm to classify disaster messages.
+Previously a cleaning step is performed, including extract the multiple targets, as well the creation of a database that will be the input of the classifier. 
+The project has also a web app where an user can introduce messages and get the classification. 
 Files
 -----
 The project is structure as shown below:
@@ -34,6 +35,8 @@ If you are using PyCharm just do the following:
 In other cases, just run the scripts following the requirement expresses in the __main__
 functions. That is to run the script followed by the necessary arguments as shown below:
 
+```
 python process_data.py messages_filepath, categories_filepath, database_filepath
-python train_classifier.py database_filepath, model_filepath
 
+python train_classifier.py database_filepath, model_filepath
+```

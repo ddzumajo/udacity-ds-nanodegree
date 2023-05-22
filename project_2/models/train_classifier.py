@@ -1,7 +1,7 @@
 import sys
 import os
 import nltk
-from pandas.io import pickle
+import pickle
 from sklearn.multiclass import OneVsRestClassifier
 
 nltk.download(['punkt', 'wordnet', 'stopwords'])
@@ -33,7 +33,7 @@ def load_data(database_filepath):
     """
     # load data from database
     engine = create_engine('sqlite:///' + database_filepath)
-    df = pd.read_sql_table('DisasterResponse', con=engine)
+    df = pd.read_sql_table('ft_messages', con=engine)
     # create X, Y, and category names.
     X = df['message']
     Y = df.drop(['id', 'message', 'original', 'genre'], axis=1)
