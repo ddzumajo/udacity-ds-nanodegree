@@ -45,5 +45,8 @@ Contributions to this project are welcome. To contribute, follow these steps:
 4. Test your changes to ensure they work as expected.
 5. Submit a pull request describing your changes.
 
+## Medium article
+An article published in medium is also avaiable. [Link](https://medium.com/@ddzumajo/predicting-manhattan-apartment-prices-exploring-airbnb-dataset-in-new-york-bff972f41a63)
+
 ## License
 Please note that this project is for educational purposes and serves as a starting point for your own analysis. It may not cover all edge cases or provide production-ready solutions. Use it responsibly and adapt it to your specific needs.
